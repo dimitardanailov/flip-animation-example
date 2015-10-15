@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import filipanimation.exampleflipanimation.R;
+import filipanimation.exampleflipanimation.enums.fragments.FragmentAnimationType;
+import filipanimation.exampleflipanimation.enums.fragments.FragmentTag;
+import filipanimation.exampleflipanimation.fragments.BaseFragment;
 
 /**
  * Created by Dimitar Danailov on 10/13/15.
@@ -16,6 +19,8 @@ public class AnimationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-
+        if (savedInstanceState == null) {
+            BaseFragment.loadFragmentTransaction(this, R.id.map_container, FragmentTag.GOOGLE_MAP.getAbbreviation(), FragmentAnimationType.NONE);
+        }
     }
 }

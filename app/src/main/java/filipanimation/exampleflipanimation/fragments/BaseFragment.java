@@ -12,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import filipanimation.exampleflipanimation.R;
 import filipanimation.exampleflipanimation.enums.fragments.FragmentAnimationType;
 import filipanimation.exampleflipanimation.enums.fragments.FragmentTag;
+import filipanimation.exampleflipanimation.fragments.googlemaps.ApplicationMapFragment;
 
 /**
  * Created by Dimitar Danailov on 10/14/15.
@@ -137,7 +138,7 @@ public class BaseFragment extends Fragment {
         BaseFragment BaseFragment = null;
 
         if (fragmentTag.equals(FragmentTag.GOOGLE_MAP.getAbbreviation())) {
-            // BaseFragment = new ClusterMarkerMapFragment();
+            BaseFragment = new ApplicationMapFragment();
         }
 
         return BaseFragment;

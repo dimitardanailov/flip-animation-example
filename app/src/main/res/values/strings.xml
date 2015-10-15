@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExampleFlipAnimation</string>
+    <string name="map">Google map</string>
+    <string name="second_cart">Second Cart</string>
 </resources>

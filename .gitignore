@@ -110,3 +110,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# Project
+app/src/debug/res/values/google_maps_api.xml
