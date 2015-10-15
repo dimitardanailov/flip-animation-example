@@ -20,7 +20,8 @@ public class AnimationActivity extends Activity {
         setContentView(R.layout.main_activity);
 
         if (savedInstanceState == null) {
-            BaseFragment.loadFragmentTransaction(this, R.id.map_container, FragmentTag.GOOGLE_MAP.getAbbreviation(), FragmentAnimationType.NONE);
+            BaseFragment.loadFragmentTransaction(this, R.id.container, FragmentTag.GOOGLE_MAP.getAbbreviation(), FragmentAnimationType.NONE);
+            // BaseFragment.loadFragmentTransaction(this, R.id.container, FragmentTag.SECOND_CART.getAbbreviation(), FragmentAnimationType.NONE);
         }
     }
 }

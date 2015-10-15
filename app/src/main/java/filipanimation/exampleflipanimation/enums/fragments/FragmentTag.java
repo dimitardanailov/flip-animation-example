@@ -9,7 +9,8 @@ import filipanimation.exampleflipanimation.collections.enums.AbbreviationMap;
  * Post: http://stackoverflow.com/questions/1080904/how-can-i-lookup-a-java-enum-from-its-string-value
  */
 public enum FragmentTag {
-    GOOGLE_MAP("GOOGLE_MAP");
+    GOOGLE_MAP("GOOGLE_MAP"),
+    SECOND_CART("SECOND_CART");
 
     private final String abbreviation;
 

@@ -135,13 +135,15 @@ public class BaseFragment extends Fragment {
      * @return
      */
     public static BaseFragment initializeFragmentByTagName(String fragmentTag) {
-        BaseFragment BaseFragment = null;
+        BaseFragment baseFragment = null;
 
         if (fragmentTag.equals(FragmentTag.GOOGLE_MAP.getAbbreviation())) {
-            BaseFragment = new ApplicationMapFragment();
+            baseFragment = new ApplicationMapFragment();
+        } else if (fragmentTag.equals(FragmentTag.SECOND_CART.getAbbreviation())) {
+            baseFragment = new SecondCartFragment();
         }
 
-        return BaseFragment;
+        return baseFragment;
     }
 
     /**
