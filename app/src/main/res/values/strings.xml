@@ -2,4 +2,7 @@
     <string name="app_name">ExampleFlipAnimation</string>
     <string name="map">Google map</string>
     <string name="second_cart">Second Cart</string>
+
+    <string name="flip_card_button_show_front_card">Display Second Card</string>
+    <string name="flip_card_button_show_second_card">Display Google Map Card</string>
 </resources>

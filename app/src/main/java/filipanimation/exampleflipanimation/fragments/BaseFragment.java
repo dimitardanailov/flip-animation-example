@@ -141,6 +141,8 @@ public class BaseFragment extends Fragment {
             baseFragment = new ApplicationMapFragment();
         } else if (fragmentTag.equals(FragmentTag.SECOND_CART.getAbbreviation())) {
             baseFragment = new SecondCartFragment();
+        } else if (fragmentTag.equals(FragmentTag.CARD_HOLDER.getAbbreviation())) {
+            baseFragment = new CardHolderFragment();
         }
 
         return baseFragment;
@@ -159,17 +161,36 @@ public class BaseFragment extends Fragment {
         String abbreviation = animationType.getAbbreviation();
 
         if (abbreviation.equals(FragmentAnimationType.FADE_IN_FADE_OUT.getAbbreviation())) {
-            fragmentTransaction.setCustomAnimations(R.anim.object_animator_fadein, R.anim.object_animator_fadeout);
+            fragmentTransaction.setCustomAnimations(
+                    R.animator.object_animator_fadein,
+                    R.animator.object_animator_fadeout
+            );
         } else if (abbreviation.equals(FragmentAnimationType.ENTER_RIGHT_AND_FADE_IN_EXIT_RIGHT_FADE_OUT.getAbbreviation())) {
             fragmentTransaction.setCustomAnimations(
-                    R.anim.object_animator_enter_from_right_fadein,
-                    R.anim.object_animator_exit_to_right_fadeout
+                    R.animator.object_animator_enter_from_right_fadein,
+                    R.animator.object_animator_exit_to_right_fadeout
             );
-        } else {
+        } else if (abbreviation.equals(FragmentAnimationType.ENTER_RIGHT_EXIT_RIGHT)) {
             fragmentTransaction.setCustomAnimations(
-                    R.anim.object_animator_enter_from_right,
-                    R.anim.object_animator_exit_to_right
-
+                    R.animator.object_animator_enter_from_right,
+                    R.animator.object_animator_exit_to_right,
+                    R.animator.object_animator_enter_from_right,
+                    R.animator.object_animator_exit_to_right
+            );
+        } else if (abbreviation.equals(FragmentAnimationType.FLIP_CARD)) {
+            /**
+             * Documentation: http://developer.android.com/training/animation/cardflip.html
+             *
+             * Replace the default fragment animations with animator resources representing
+             * rotations when switching to the back of the card, as well as animator
+             * resources representing rotations when flipping back to the front (e.g. when
+             * the system Back button is pressed).
+             */
+            fragmentTransaction.setCustomAnimations(
+                    R.animator.card_flip_right_in,
+                    R.animator.card_flip_right_out,
+                    R.animator.card_flip_left_in,
+                    R.animator.card_flip_left_out
             );
         }
 

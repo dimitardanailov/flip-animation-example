@@ -14,8 +14,14 @@ public enum FragmentAnimationType {
     // fade between fragments
     FADE_IN_FADE_OUT ("FADE_IN_FADE_OUT"),
 
+    // Move from right to
+    ENTER_RIGHT_EXIT_RIGHT ("ENTER_RIGHT_EXIT_RIGHT"),
+
     // Move content and fade between fragments
-    ENTER_RIGHT_AND_FADE_IN_EXIT_RIGHT_FADE_OUT ("ENTER_RIGHT_AND_FADE_IN_EXIT_RIGHT_FADE_OUT");
+    ENTER_RIGHT_AND_FADE_IN_EXIT_RIGHT_FADE_OUT ("ENTER_RIGHT_AND_FADE_IN_EXIT_RIGHT_FADE_OUT"),
+
+    // Resource: http://developer.android.com/training/animation/cardflip.html
+    FLIP_CARD ("FLIP_CARD");
 
     private final String abbreviation;
 
